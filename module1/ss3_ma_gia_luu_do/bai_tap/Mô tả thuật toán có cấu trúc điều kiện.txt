@@ -1,0 +1,16 @@
+BEGIN
+ INPUT Loại A,Loại B,Loại C,Loại D,Loại E
+ INPUT Điểm
+ count=(0<=100)    
+ IF (count >= 75)
+    DISPLAY "Loại A"
+    ELSE IF (count 60 <= Điểm < 75)
+         DISPLAY "Loại B"
+         ELSE IF (count 45 <= Điểm < 60)
+              DISPLAY "Loại C"         
+              ELSE IF (count 35 <= Điểm < 45)
+                   DISPLAY "Loại D"
+                   ELSE
+                       DISPLAY "Loại E"
+ END IF
+END

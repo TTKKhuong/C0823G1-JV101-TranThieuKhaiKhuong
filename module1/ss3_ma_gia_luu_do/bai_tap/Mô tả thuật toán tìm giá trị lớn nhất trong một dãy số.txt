@@ -1,0 +1,14 @@
+BEGIN
+ INPUT n  
+   INPUT a1, a2, a3... an
+   max = a1
+   i = 1
+  IF (i<n)
+    WHITE IF (i>=n)
+            IF (ai>max)
+            max=ai
+            i=i+1
+    END WHILE
+  DISLAY max
+
+END
