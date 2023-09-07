@@ -2,7 +2,7 @@ BEGIN
  INPUT n  
    INPUT a1, a2, a3... an
    max = a1
-   i = 1
+   i = 2
   IF (i<n)
     WHITE IF (i>=n)
             IF (ai>max)
