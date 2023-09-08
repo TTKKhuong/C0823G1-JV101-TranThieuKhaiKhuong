@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form đơn  giản</title>
+    <style>
+        span{
+            color: orangered;
+        }
+    </style>
+</head>
+<body>
+ <form>
+     <table border=10 bordercolor="blue">
+         <td>
+     <table>
+         <td>
+   <table>
+       <tr border=0 bgcolor="#ff4500">
+           <th colspan="3">SỞ THÍCH CỦA BẠN</th>
+       </tr>
+       <tr>
+           <td><label style="color: dodgerblue">Họ và tên</label></td>
+           <td><input type="text" name="yourname"></td>
+       </tr>
+       <tr>
+           <td><label style="color: dodgerblue">Email</label></td>
+           <td><input type="text" name="email"></td>
+       </tr>
+   </table>
+      <table>
+           <tr>
+           <td style="color: dodgerblue">Sở thích</td>
+             <td>
+                 <input type="checkbox" name="sport"> <span>Thể thao</span>
+             </td>
+             <td>
+                 <input type="checkbox" name="music"> <span>Âm nhạc</span>
+             </td>
+               <td>
+                 <input type="checkbox" name="readbook"> <span>Đọc sách</span>
+             </td>
+         </tr>
+         <tr>
+             <td></td>
+             <td>
+                 <input type="checkbox" name="website"> <span>Lướt web</span>
+             </td>
+             <td>
+                 <input type="checkbox" name="playgame"> <span>Chơi game</span>
+             </td>
+             <td>
+                 <input type="checkbox" name="movie"> <span>Điện ảnh</span>
+             </td>
+         </tr>
+         <tr>
+             <td></td>
+             <td>
+                 <input type="checkbox" name="tour"> <span>Du lịch</span>
+             </td>
+             <td></td>
+             <td></td>
+         </tr>
+      </table>
+     <table style="width: 250px">
+         <tr>
+             <th><input type="submit" value="Gửi thông tin" name="Submit Form"></th>
+             <th><input type="reset" value="Nhập lại" name="Reset Form"></th>
+         </tr>
+     </table>
+         </td>
+
+ </table>
+         </td>
+     </table>
+ </form>
+
+
+ <hr>
+
+
+<table border= 0 bgcolor="yellow">
+    <form>
+        <tr>
+            <th colspan="2">ĐĂNG KÝ HỌC VIÊN</th>
+        </tr>
+        <tr>
+            <td>Họ và tên</td>
+            <td>
+                <input type="text" name="yourname">
+            </td>
+        </tr>
+        <tr>
+            <td>Ngày sinh</td>
+            <td>
+                <input type="date" name="birthday">
+            </td>
+        </tr>
+        <tr>
+            <td>Giới tính</td>
+            <td>
+                <input type="radio" name="gender"> Nam
+                <input type="radio" name="gender"> Nữ
+            </td>
+        </tr>
+        <tr>
+            <td>Địa chỉ</td>
+            <td><textarea></textarea></td>
+        </tr>
+        <tr>
+            <td>
+                <label>Lớp</label>
+            </td>
+            <td>
+                <select>
+                    <option>-Chọn lớp-</option>
+                    <option>Lớp CSS</option>
+                    <option>Lớp Java</option>
+                    <option>Lớp C#</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Email</label></td>
+            <td><input type="text" name="email"></td>
+        </tr>
+        <tr>
+            <td><label>Số điện thoại:</label> </td>
+            <td><input type="number" name="Phone"></td>
+        </tr>
+            <tr>
+                <th><input type="submit" value="Đăng ký" name="Submit Form"></th>
+                <th><input type="reset" value="Nhập lại" name="Reset Form"></th>
+            </tr>
+    </form>
+</table>
+</body>
+</html>
