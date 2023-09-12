@@ -1,10 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Variable</title>
 </head>
 <body>
-$END$
+  <div>
+      <table border="1" cellspacing="0.1" cellpadding="1" bgcolor="orange">
+          <tr>
+            <th colspan="3">Họ và tên: Đào Thị C</th>
+          </tr>
+      <tr bgcolor="#7fffd4">
+          <th>Vật Lý</th>
+          <th>Hoá Học</th>
+          <th>Sinh Học</th>
+      </tr>
+          <tr>
+              <td>
+                  <input type="number" id="Aly">
+              </td>
+              <td>
+                  <input type="number" id="Bhoc">
+              </td>
+              <td>
+                  <input type="number" id="Choc">
+              </td>
+          </tr>
+          <tr bgcolor="#deb887">
+              <td colspan="3">Total :<p style="text-align: right" id="result"></p></td>
+          </tr>
+      </table>
+      <button onclick="total()">Nhập</button>
+  </div>
+<script>
+    function total() {
+       let vatLy = +document.getElementById("Aly").value;
+       let hoaHoc = +document.getElementById("Bhoc").value;
+       let sinhHoc = +document.getElementById("Choc").value;
+       let tongDiem = (vatLy + hoaHoc + sinhHoc) / 3;
+       document.getElementById("result").textContent = tongDiem.toFixed(2);
+    }
+</script>
 </body>
 </html>

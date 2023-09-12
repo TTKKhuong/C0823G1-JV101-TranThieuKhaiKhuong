@@ -1,10 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Ứng Dụng Máy Tính</title>
 </head>
 <body>
-$END$
+<div>
+  <input type="number" placeholder="Nhập số A" id="so_a">
+  <input type="number" placeholder="Nhập số B" id="so_b">
+  <br>
+      <button onclick="cong()" > Addition(+)</button>
+      <button onclick="tru()" > Subtraction(-)</button>
+      <button onclick="nhan()" > Multiplication(X)</button>
+      <button onclick="chia()" > Division(/)</button>
+</div>
+<p>Kết quả: <span  id="result"></span></p>
+<button onClick="Reset()">Reset</button>
+<script>
+    function cong() {
+        let a = +document.getElementById("so_a").value;
+        let b = +document.getElementById("so_b").value;
+        document.getElementById("result").textContent = a + b;
+    }
+    function tru() {
+        let a = +document.getElementById("so_a").value;
+        let b = +document.getElementById("so_b").value;
+        document.getElementById("result").textContent = a - b;
+    }
+    function nhan() {
+        let a = +document.getElementById("so_a").value;
+        let b = +document.getElementById("so_b").value;
+        document.getElementById("result").textContent = a * b;
+    }
+    function chia() {
+        let a = +document.getElementById("so_a").value;
+        let b = +document.getElementById("so_b").value;
+        document.getElementById("result").textContent = (a / b).toFixed(2);
+    }
+    function Reset() {
+        document.getElementById("result").textContent = "";
+    }
+</script>
+
 </body>
 </html>
