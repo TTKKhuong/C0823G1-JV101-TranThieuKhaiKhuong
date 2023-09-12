@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <table style="text-align: center" cellspacing="0.1" cellpadding="5">
+    <tr>
+      <th>Amount</th>
+      <th>From Currency</th>
+      <th>To Currency</th>
+    </tr>
+    <tr>
+      <td><input type="number" id="money" placeholder="Amount"></td>
+      <td><select id="FromCurrently">
+        <option value="usd">USD</option>;
+        <option value="vnd">VND</option>;
+      </select>
+      </td>
+      <td><select id="ToCurrently">
+        <option value="usd">USD</option>;
+        <option value="vnd">VND</option>;
+      </select>
+      </td>
+      <td><button onclick="convert()" >Convert</button>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Result: <p style="color: blue" id="result"></p></td>
+    </tr>
+  </table>
+<script>
+  function convert() {
+    let money = parseFloat(document.getElementById("money").value);
+    let FromCurrently = document.getElementById("FromCurrently").value;
+    let ToCurrently = document.getElementById("ToCurrently").value;
+    let tiGia = {
+      usd: 1,
+      vnd: 23000
+    }
+    let result = (money / tiGia[FromCurrently]) * tiGia[ToCurrently];
+    document.getElementById("result").textContent = result.toFixed(2);
+
+  }
+</script>
+
+</body>
+</html>
