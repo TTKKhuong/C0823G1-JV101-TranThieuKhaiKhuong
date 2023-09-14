@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</title>
+</head>
+<body>
+<script>
+  let minute = prompt("Nhập số phút gọi đi");
+  let bacMot = minute * 1200; // <= 10p gọi đi
+  let bacHai = minute * 1000; // <= 20p gọi đi
+  let bacBa = minute * 800; // > 20p gọi đi
+  if (minute <= 10) {
+    alert(bacMot + ' đ');
+  } else if (minute <= 20) {
+    alert(bacHai + ' đ');
+  } else {
+    alert(bacBa + ' đ');
+  }
+</script>
+
+</body>
+</html>

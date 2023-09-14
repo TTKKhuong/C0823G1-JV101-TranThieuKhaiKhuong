@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình tính thuế thu nhập cá nhân.</title>
+</head>
+<body>
+<script>
+  let waGe = +prompt("Nhập thu nhập hàng tháng");
+  if (waGe <= 5000000) {
+    alert((waGe*5)/100 + "đ là số thuế bạn phải nộp bậc 1" )
+  } else if (waGe <= 10000000) {
+    alert((waGe * 10) / 100 + 250000 + "đ là số thuế bạn phải nộp bậc 2")
+  } else if (waGe <= 18000000) {
+    alert((waGe * 15) / 100 + 750000 + "đ là số thuế bạn phải nộp bậc 3")
+  }else if (waGe <= 32000000) {
+    alert((waGe * 20) / 100 + 1950000 + "đ là số thuế bạn phải nộp bậc 4")
+  }else if (waGe <= 52000000) {
+    alert((waGe * 25) / 100 + 4750000 + "đ là số thuế bạn phải nộp bậc 5")
+  }else if (waGe <= 80000000) {
+    alert((waGe * 30) / 100 + 9750000 + "đ là số thuế bạn phải nộp bậc 6")
+  } else {
+    alert((waGe * 35) / 100 + 18150000 + "đ là số thuế bạn phải nộp bậc 7")
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính ch số cân nặng cơ thể</title>
+</head>
+<body>
+ <script>
+   let  chieuCao = prompt('Nhập chiều cao mét');
+   let  canNang = prompt('Nhập cân nặng Kg');
+   let  bmi = canNang/(chieuCao**2);
+   if (bmi < 18.5) {
+     alert("Thiếu Cân");
+   } else if (bmi < 25) {
+     alert("Bình Thường");
+   } else if (bmi < 30) {
+     alert("Thừa Cân");
+   } else {
+     alert("Béo Phì");
+   }
+ </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</title>
+</head>
+<body>
+<script>
+  let dkt = +prompt("Điểm kiểm tra");
+  let dtgk = +prompt("Điểm thi giữa kỳ");
+  let dtck = +prompt("Điểm thi cuối kỳ");
+  let point = (dkt + dtgk + dtck)/3;
+  if (point >= 8){ //10
+    document.write("Học sinh giỏi");
+  } else if (point >= 6){//10
+    document.write("Học sinh khá");
+  } else if (point >= 4){//10
+    document.write("Học sinh trung bình");
+  } else {
+    document.write("Học sinh yếu");
+  }
+</script>
+</body>
+</html>

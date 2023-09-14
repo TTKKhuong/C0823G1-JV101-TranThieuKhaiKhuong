@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập số a");
+    let b = +prompt("Nhập số b");
+    let c = +prompt("Nhập số c");
+    let delTa = (b*b) - 4*a*c;
+    if (delTa < 0) {
+      alert("Phương trình vô nghiệm")
+    } else if (delTa === 0) {
+      alert("Phương trình có nghiệm kép: x1=x2=-b/2a");
+    } else {
+      alert("Phương trình có 2 nghiệm phân biệt, ta dùng công thức nghiệm sau");
+    }
+</script>
+
+</body>
+</html>

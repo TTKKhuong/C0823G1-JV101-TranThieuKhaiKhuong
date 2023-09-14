@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình tính giá điện.</title>
+</head>
+<body>
+<script>
+  let kWh = prompt("Nhập số kWh điện đã sử dụng");
+  let bacMot = kWh * 1500; // <= 50 kwh
+  let bacHai = (kWh - 50) * 2000 + (50 * 1500); // <= 100 kwh
+  let bacBa = (kWh - 100) * 2500 + ((50 * 1500) + (50 * 2000)); // <= 200 kwh
+  let bacBon = (kWh - 200) * 3000 + ((50 * 1500) + (50 * 2000) + (100 * 2500)); // > 300 kwh
+  if (kWh <= 50) {
+      alert("Tổng số tiền điện bạn vượt mức bậc một là: " + bacMot + ' đ');
+  } else  if (kWh <= 100) {
+      alert("Tổng số tiền điện bạn vượt mức bậc hai là: " + bacHai + ' đ');
+  } else  if (kWh <= 200) {
+      alert("Tổng số tiền điện bạn vượt mức bậc ba là: " + bacBa + ' đ');
+  } else {
+      alert("Tổng số tiền điện bạn vượt mức bậc bốn là: " + bacBon + ' đ');
+  }
+</script>
+</body>
+</html>

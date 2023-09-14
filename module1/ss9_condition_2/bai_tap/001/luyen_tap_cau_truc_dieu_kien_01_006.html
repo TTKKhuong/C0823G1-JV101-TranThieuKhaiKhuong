@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng nhận được theo mức doanh số bán hàng</title>
+</head>
+<body>
+<script>
+    let doanhSo = prompt("Nhập doanh số bán được vnđ"); // vnđ, ex: 1.000.000 đ.
+    let hoaHong = (doanhSo * 20)/100; // 20% hoa hồng bán được theo doanh số.
+    let chiTieu = (hoaHong - 500000)/doanhSo * 100; //Chỉ tiêu hoa hồng 500.000
+    if (chiTieu <= 0) {
+        alert("Không đạt chỉ tiêu, không được thưởng hoa hồng");
+    } else if (chiTieu <= 15) {
+        alert("Đủ Chỉ tiêu, thưởng hoa hồng");
+    } else {
+        alert("Vưọt mức chỉ tiêu, thưởng hoa hồng X2 !");
+    }
+</script>
+
+</body>
+</html>
