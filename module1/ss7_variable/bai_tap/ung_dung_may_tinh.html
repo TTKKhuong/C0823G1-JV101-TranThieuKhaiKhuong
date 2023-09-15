@@ -6,8 +6,8 @@
 </head>
 <body>
 <div>
-  <input type="number" placeholder="Nhập số A" id="so_a">
-  <input type="number" placeholder="Nhập số B" id="so_b">
+  <input type="number" placeholder="Nhập số A" id="numberA">
+  <input type="number" placeholder="Nhập số B" id="numberB">
   <br>
       <button onclick="cong()" > Addition(+)</button>
       <button onclick="tru()" > Subtraction(-)</button>
@@ -15,29 +15,29 @@
       <button onclick="chia()" > Division(/)</button>
 </div>
 <p>Kết quả: <span  id="result"></span></p>
-<button onClick="Reset()">Reset</button>
+<button onClick="reset()">Reset</button>
 <script>
     function cong() {
-        let a = +document.getElementById("so_a").value;
-        let b = +document.getElementById("so_b").value;
+        let a = +document.getElementById("numberA").value;
+        let b = +document.getElementById("numberB").value;
         document.getElementById("result").textContent = a + b;
     }
     function tru() {
-        let a = +document.getElementById("so_a").value;
-        let b = +document.getElementById("so_b").value;
+        let a = +document.getElementById("numberA").value;
+        let b = +document.getElementById("numberB").value;
         document.getElementById("result").textContent = a - b;
     }
     function nhan() {
-        let a = +document.getElementById("so_a").value;
-        let b = +document.getElementById("so_b").value;
+        let a = +document.getElementById("numberA").value;
+        let b = +document.getElementById("numberB").value;
         document.getElementById("result").textContent = a * b;
     }
     function chia() {
-        let a = +document.getElementById("so_a").value;
-        let b = +document.getElementById("so_b").value;
+        let a = +document.getElementById("numberA").value;
+        let b = +document.getElementById("numberB").value;
         document.getElementById("result").textContent = (a / b).toFixed(2);
     }
-    function Reset() {
+    function reset() {
         document.getElementById("result").textContent = "";
     }
 </script>

@@ -13,12 +13,12 @@
     </tr>
     <tr>
       <td><input type="number" id="money" placeholder="Amount"></td>
-      <td><select id="FromCurrently">
+      <td><select id="fromCurrently">
         <option value="usd">USD</option>;
         <option value="vnd">VND</option>;
       </select>
       </td>
-      <td><select id="ToCurrently">
+      <td><select id="toCurrently">
         <option value="usd">USD</option>;
         <option value="vnd">VND</option>;
       </select>
@@ -33,13 +33,13 @@
 <script>
   function convert() {
     let money = parseFloat(document.getElementById("money").value);
-    let FromCurrently = document.getElementById("FromCurrently").value;
-    let ToCurrently = document.getElementById("ToCurrently").value;
+    let fromCurrently = document.getElementById("fromCurrently").value;
+    let toCurrently = document.getElementById("toCurrently").value;
     let tiGia = {
       usd: 1,
       vnd: 23000
     }
-    let result = (money / tiGia[FromCurrently]) * tiGia[ToCurrently];
+    let result = (money / tiGia[fromCurrently]) * tiGia[toCurrently];
     document.getElementById("result").textContent = result.toFixed(2);
 
   }
