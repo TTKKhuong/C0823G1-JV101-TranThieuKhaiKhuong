@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu lệnh switch-case</title>
+</head>
+<body>
+<div>
+    <h2>Kiểm tra số ngày có trong tháng.</h2>
+    <input type="number" placeholder="Nhập tháng" id="numberA">
+    <button type="button" onclick="tinhNgay()" >Tính số ngày</button><br>
+    <h3 id="display"></h3>
+</div>
+<script>
+    function tinhNgay() {
+        let a ;
+          a = +document.getElementById("numberA").value;
+        let result = '';
+        switch (a){
+            case 1 :
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                result = "Tháng " + a + " có 31 ngày."
+                break;
+            case 2:
+                result = "Tháng " + a + " có 28 hoặc 29 ngày."
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                result = "Tháng " + a + " có 30 ngày."
+                }
+        document.getElementById('display').innerText = result;
+    }
+
+</script>
+
+</body>
+</html>

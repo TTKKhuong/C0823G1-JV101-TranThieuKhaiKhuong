@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</title>
+</head>
+<body>
+<div>
+  <h3>Tiền lãi ngân hàng.</h3>
+    <input type="number" id="money" placeholder="Nhập số tiền vay"><br><br>
+    <input type="number" id="month" placeholder="Nhập số tháng vay"><br><br>
+    <input type="number" id="laiSuat" placeholder="Nhập lãi suất vay"><br><br>
+  <button type="button" onclick="result()" >Tính Lãi</button>
+  <p>Lãi : <span id="display"></span></p>
+</div>
+<script>
+ function result() {
+   let tien = +document.getElementById("money").value;
+   let thang = +document.getElementById("month").value;
+   let lai = +document.getElementById("laiSuat").value;
+   let laiBank = 0;
+   if (tien && thang && lai <= 0) {
+       laiBank = 0
+        } else if (thang <= 3 && tien > 0 && lai > 0) {
+       laiBank = (thang * (tien * lai))/100;
+        } else if (thang <= 6 && tien > 0 && lai > 0) {
+       laiBank = (thang * (tien * lai))/100 * 1.2 ;
+        } else if (thang <= 12 && tien > 0 && lai > 0) {
+       laiBank = (thang * (tien * lai))/100 * 1.5 ;
+   } else {
+       laiBank = (thang * (tien * lai))/100 * 2;
+   }
+       document.getElementById("display").innerText = "Lãi ngân hàng " + laiBank + " đ";
+ }
+</script>
+</body>
+</html>
