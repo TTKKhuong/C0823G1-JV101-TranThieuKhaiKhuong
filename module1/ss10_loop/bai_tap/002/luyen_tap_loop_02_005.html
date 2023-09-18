@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con)
+      khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</title>
+</head>
+<body>
+<script>
+  let money = +parseInt(prompt("Nhập số tiền gửi"));
+  let month = +parseInt(prompt("Nhập số tháng"));
+  let interestRate = +prompt("Lãi suất");
+    for (let i = 1; i <= month ; i++) {
+      money = money + (money * interestRate / 100);
+  }
+    document.write("Lãi suất tổng là: " + money.toFixed(2) + " vnđ.");
+
+</script>
+</body>
+</html>

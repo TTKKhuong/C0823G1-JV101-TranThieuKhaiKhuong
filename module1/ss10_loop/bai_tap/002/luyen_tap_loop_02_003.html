@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau</title>
+</head>
+<body>
+<script>
+  let n = +prompt("Nhập số");
+  let a = "*";
+  for (let i = 1;i <= n;i++) {
+    document.write("<br>");
+    for (let j = 1; j <= i; j++) {
+      document.write(a);
+    }
+  }
+  document.write("<br>");
+
+    for (let i = n;i > 0;i--) {
+      document.write("<br>");
+    for (let j = 0; j < i;j++) {
+    document.write(a);
+  }
+  }
+</script>
+</body>
+</html>

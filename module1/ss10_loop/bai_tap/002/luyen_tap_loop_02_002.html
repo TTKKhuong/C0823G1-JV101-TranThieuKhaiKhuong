@@ -5,6 +5,18 @@
     <title> Tính giai thừa của một số nguyên dương</title>
 </head>
 <body>
-
+<script>
+  debugger
+  let n = +parseInt(prompt("Nhập số giai thừa"));
+  if (n < 0){
+    alert("Xin nhập số nguyên dương");
+  } else {
+    let num = 1;
+    for (let i = 1; i <= n; i++) {
+      num = num * i;
+    }
+    document.write(num);
+  }
+</script>
 </body>
 </html>
