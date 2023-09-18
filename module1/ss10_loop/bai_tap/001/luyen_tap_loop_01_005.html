@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng của 20 số đầu tiên trong dãy fibonacci.</title>
+</head>
+<body>
+<script>
+// total 10.945
+  let a = 0;
+  let b = 1;
+  let totalHaiMuoi = 0;
+  for (let i = 0; i < 20; i++) {
+    let total = a;
+    a = b;
+    b = total + b;
+    totalHaiMuoi += total
+    document.write(total + "<br>");
+      if (i === 19) {
+          document.write("Tổng hai mươi số đầu của Fibonacci là: " + totalHaiMuoi);
+      }
+    console.log(total + "<br>" + totalHaiMuoi);
+  }
+</script>
+</body>
+</html>
