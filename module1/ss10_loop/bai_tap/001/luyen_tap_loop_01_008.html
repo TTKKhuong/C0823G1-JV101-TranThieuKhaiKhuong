@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<button onclick="playGame()">Chơi</button>
+<script>
+  /*
+  [3, 8]
+  Math.random(); (0, 1)
+   Math.random() * 4; (0, 4)
+    Math.random() * (8 - 3);
+    Math.random() * (5); (0, 5)
+    Math.random() * (5) + 3; (3, 8)
+    Math.round(Math.random() * (5) + 3)
+   */
+  function playGame() {
+    let canDuoi = +prompt("Nhập số dưới:");//3
+    let canTren = +prompt("Nhạp số trên:");//8
+    let random = Math.round(Math.random() * (canTren - canDuoi) + canDuoi);
+    console.log(random);
+    let input = +prompt("Nhập số mà bạn đoán:");
+    let count = 1;
+    do {
+      if (input > random) {
+        input = +prompt("Số bạn nhập lớn hơn, nhập lại: ");
+        count++;
+      } else if (input < random) {
+        input = +prompt("Số bạn nhập nhỏ hơn, nhập lại: ");
+        count++;
+      } else {
+        alert("Bạn đã đoán chính xác");
+        break;
+      }
+    } while (count < 3)
+  }
+</script>
+</body>
+</html>

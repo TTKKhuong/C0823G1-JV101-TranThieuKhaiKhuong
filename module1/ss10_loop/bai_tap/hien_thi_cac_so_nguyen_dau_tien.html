@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<script>
+  let number = +prompt("Nhập số lượng số nguyên tố"); //20
+  let count = 0; //số lượng snt đã tìm thấy
+
+  let i = 2;
+  while (count <= number){
+    if(check(i)){
+      document.write(i + "</br>");
+      count++;
+    }
+    i++;
+  }
+
+  function check(num) {
+    let count = 0;
+    for( let i = 1; i <= num; i++){
+      if(num % i == 0){
+        count++;
+      }
+    }
+
+    if(count == 2){
+      console.log("Số nguyên tố");
+      return true;
+    } else {
+      console.log("Không phải là số nguyên tố");
+      return false;
+    }
+  }
+
+
+  // check(2); //OK 1
+  // check(3); //OK 2
+  // check(4); //NG
+  // check(5); //OK 3
+</script>
+</body>
+</html>
